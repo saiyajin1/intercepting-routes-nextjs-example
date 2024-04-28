@@ -2,15 +2,15 @@
 
 export default function Error({
   error,
-  reset,
 }: {
   error: Error & { digest?: string };
-  reset: () => void;
 }) {
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center gap-4 pt-2">
       <h2>Something went wrong!</h2>
-      <button onClick={() => reset()}>Try again</button>
+      <p className="text-sm text-gray-500">
+        {error.message} {error.digest}
+      </p>
     </div>
   );
 }
