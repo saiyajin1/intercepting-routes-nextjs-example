@@ -20,7 +20,10 @@ export default async function PokemonDetailPage({
   const pokemon = (await response.json()) as PokemonDetail;
 
   return (
-    <div className="group pt-4">
+    <div className="group flex flex-col gap-2 pt-2">
+      <h1 className="text-center text-3xl font-bold capitalize">
+        {pokemon.name}
+      </h1>
       <Image
         alt={pokemon.name}
         priority
@@ -42,7 +45,7 @@ export default async function PokemonDetailPage({
           <Badge
             key={type.slot}
             variant={type.type.name}
-            className="shadow-text inline-flex select-none items-center justify-center rounded-full px-4 py-2 font-semibold capitalize text-white"
+            title={type.type.name}
           >
             {type.type.name}
           </Badge>
