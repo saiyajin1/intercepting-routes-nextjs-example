@@ -9,7 +9,8 @@ export function PokemonCard({ pokemon }: { pokemon: Pokemon }) {
     <li className="group transform transition-transform hover:z-10 hover:scale-105 hover:cursor-pointer">
       <Link
         title={`View ${pokemon.name}`}
-        href={`/${pokemon.url.split("/")[6]}`}
+        href={`/pokemon/${pokemon.url.split("/")[6]}`}
+        scroll={false}
       >
         <Card>
           <CardContent className="flex flex-col items-center justify-center">

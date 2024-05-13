@@ -7,10 +7,10 @@ import { Badge } from "@/components/ui/badge";
 export default async function PokemonDetailPage({
   params,
 }: {
-  params: { pokemonId: string };
+  params: { id: string };
 }) {
   const response = await fetch(
-    `https://pokeapi.co/api/v2/pokemon/${params.pokemonId}`,
+    `https://pokeapi.co/api/v2/pokemon/${params.id}`,
   );
 
   if (!response.ok) {

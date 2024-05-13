@@ -1,6 +1,9 @@
 export default function PokeBallLoading() {
   return (
-    <div className="mt-20 flex flex-col gap-4" title="Loading...">
+    <div
+      className="flex flex-col items-center justify-center gap-4"
+      title="Loading..."
+    >
       <svg
         xlinkTitle="Loading..."
         height="208px"
