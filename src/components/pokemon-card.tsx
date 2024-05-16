@@ -11,6 +11,7 @@ export function PokemonCard({ pokemon }: { pokemon: Pokemon }) {
         title={`View ${pokemon.name}`}
         href={`/pokemon/${pokemon.url.split("/")[6]}`}
         scroll={false}
+        prefetch={false}
       >
         <Card>
           <CardContent className="flex flex-col items-center justify-center">
